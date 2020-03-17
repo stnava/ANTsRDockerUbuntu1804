@@ -47,7 +47,7 @@ apt-get -y install cmake curl
 apt-get install -y python3 python3-pip python-pip
 apt-get install -y libv8-dev git
 apt install -y python3-pip
-pip3 install virtualenv keras tensorflow antpyx
+pip3 install virtualenv keras tensorflow
 ## Run an install.R script, if it exists.
 Rscript -e 'install.packages(
   c(

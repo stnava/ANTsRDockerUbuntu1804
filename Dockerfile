@@ -63,7 +63,7 @@ RUN apt-get -y install cmake curl
 RUN apt-get install -y python3 python3-pip python-pip
 RUN apt-get install -y libv8-dev git
 RUN apt install -y python3-pip
-RUN pip3 install virtualenv keras tensorflow antpyx
+RUN pip3 install virtualenv keras tensorflow
 ## Run an install.R script, if it exists.
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 
@@ -76,6 +76,6 @@ RUN R CMD INSTALL ANTsR_0.5.4.1_R_x86_64-pc-linux-gnu_R3.6.tar.gz
 RUN git clone https://github.com/ANTsX/ANTsRNet.git && R CMD INSTALL ANTsRNet
 RUN git clone https://github.com/stnava/patchMatchR.git && R CMD INSTALL patchMatchR
 RUN wget https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-1-amd64.deb
-RUN dpkg -i pandoc-2.9.2-1-amd64.deb 
+RUN dpkg -i pandoc-2.9.2-1-amd64.deb
 
 CMD ["bash"]
