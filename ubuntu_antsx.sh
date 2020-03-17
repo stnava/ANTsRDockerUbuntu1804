@@ -92,3 +92,5 @@ wget https://github.com/ANTsX/ANTsR/releases/download/v0.5.4.1.2/ANTsR_0.5.4.1_R
 R CMD INSTALL ANTsR_0.5.4.1_R_x86_64-pc-linux-gnu_R3.6.tar.gz
 git clone https://github.com/ANTsX/ANTsRNet.git && R CMD INSTALL ANTsRNet
 git clone https://github.com/stnava/patchMatchR.git && R CMD INSTALL patchMatchR
+wget https://github.com/jgm/pandoc/releases/download/2.9.2/pandoc-2.9.2-1-amd64.deb
+dpkg -i pandoc-2.9.2-1-amd64.deb
