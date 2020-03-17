@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		software-properties-common \
@@ -92,6 +94,3 @@ git clone https://github.com/ANTsX/ANTsRNet.git && R CMD INSTALL ANTsRNet
 git clone https://github.com/stnava/patchMatchR.git && R CMD INSTALL patchMatchR
 chmod a+rwx *
 chmod a+rwx .
-
-
-CMD ["bash"]
