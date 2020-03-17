@@ -1,0 +1,35 @@
+[aws]
+aws_region_name = us-east-1
+
+[cluster mycluster]
+key_name = myeb
+vpc_settings = test
+cluster_type = spot
+base_os = ubuntu1804
+master_instance_type = c4.4xlarge
+compute_instance_type = c4.4xlarge
+max_queue_size = 512
+maintain_initial_size = true
+pre_install = https://github.com/stnava/ANTsRDockerUbuntu1804/blob/master/ubuntu_antsx.sh
+s3_read_resource = *
+s3_read_write_resource = *
+
+[vpc test]
+vpc_id = vpc-0c38f488a61f469dd
+master_subnet_id = subnet-077a95d693c38360a
+compute_subnet_id = subnet-0ab3a09f1f7d1c9b9
+use_public_ips = false
+
+[global]
+cluster_template = mycluster
+update_check = true
+sanity_check = true
+cluster_type = spot
+
+[aliases]
+ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
+
+[cluster awsbatch]
+scheduler = awsbatch
+key_name = freetierstnavakeyohio
+vpc_settings = test
