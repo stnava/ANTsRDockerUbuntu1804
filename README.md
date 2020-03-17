@@ -1,8 +1,11 @@
-An attempt at making a portable ANTsR docker app, with some
-visualization capabilities via RStudio.
+
+
+Portable ANTsR docker app based on minimal ubuntu:18.04 image.
+
+https://hub.docker.com/r/rocker/r-ubuntu
 
 ```
-docker build --build-arg WHEN=2019-05-01 -t  antsr .
+docker build  -t  uantsr .
 ```
 
 to push an update
@@ -27,3 +30,4 @@ or just run into bash directly
 ```
 docker run -it --rm antsr:latest /bin/bash
 ```
+
